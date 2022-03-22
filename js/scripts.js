@@ -23,5 +23,30 @@ $(document).ready(function() {
       catResponse.before("<li class='anger'>BARK BARK BARK!</li>");
     }, 500);
   });
+
+  $("#dog-neutral").click(function() {
+    const dogResponse = $("<li>Woof.</li>");
+    $("#response").prepend(dogResponse);
+    console.log(dogResponse);
+    setTimeout(function () {
+      dogResponse.before("<li>Meow.</li>");
+    }, 500);
+  });
+
+  $("#dog-excited").click(function() {
+    const dogResponse = $("<li>BARK!</li>");
+    $("#response").prepend(dogResponse);
+    setTimeout(function () {
+      dogResponse.before("<li>Meow meow!!</li>");
+    }, 500);
+  });
+
+  $("#dog-angry").click(function() {
+    const dogResponse = $("<li>SNARL GROWL!</li>");
+    $("#response").prepend(dogResponse);
+    setTimeout(function () {
+      dogResponse.before("<li class='anger'>HISS!</li>");
+    }, 500);
+  });
 });
 
